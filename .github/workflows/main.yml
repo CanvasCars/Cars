@@ -1,9 +1,9 @@
 name: cars12
 
 on:
-  #schedule:
-    #- cron: "0 6,10,14,18,0,4 * * *"
-  push: 
+  schedule:
+    - cron: "10 10 * * *"
+  #push: 
 
     
 
