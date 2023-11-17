@@ -1,8 +1,8 @@
 name: cars12
 
-on:
-  schedule:
-    - cron: "10 10 * * *"
+#on:
+  #schedule:
+   # - cron: "10 10 * * *"
   #push: 
 
     
