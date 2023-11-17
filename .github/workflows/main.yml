@@ -1,0 +1,37 @@
+name: cars12
+
+on:
+  #schedule:
+    #- cron: "0 6,10,14,18,0,4 * * *"
+  push: 
+
+    
+
+jobs:
+  RunScript:
+    runs-on: ubuntu-latest
+    concurrency: my-concurrency-group3jddt
+    timeout-minutes: 4000
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4
+          pip install pyodbc
+          pip install regex
+          pip install lxml
+          pip install requests
+          pip install GitPython
+
+      - name: Run cars.py
+        run: python cars.py
+     
